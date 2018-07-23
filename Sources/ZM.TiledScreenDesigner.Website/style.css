@@ -1,0 +1,146 @@
+body
+{
+	background-color: white;
+	font-family: 'Maven Pro', sans-serif;
+	margin: 0;
+}
+
+.leftmenu
+{
+	border-right: 1px solid #ddd;
+	float: left;
+	position: fixed;
+	width: 256px;
+	height: 100%;
+}
+
+.leftmenu ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+.leftmenu li
+{
+	width: 256px;
+	text-align: right;
+}
+
+.leftmenu a
+{
+	text-decoration: none;
+	color: black;
+	font-size: larger;
+	display: block;
+	padding: 0.5em 1.5em 0.5em 0;
+	border-bottom: 2px solid transparent;
+	margin: 0.5em 0;
+}
+
+.leftmenu a:hover
+{
+	border-bottom: 2px solid #008500;
+}
+
+.content
+{
+	overflow: auto;
+	position: absolute;
+	left: 300px;
+	min-height: 1000px;
+	padding-right: 10%;
+}
+
+.title
+{
+	font-size: 60px;
+	font-weight: bolder;
+	padding: 0.5em 0;
+}
+
+.titleztb
+{
+	color: #008500;
+	text-decoration: none;
+}
+
+.contentblock
+{
+	padding-top: 1em;
+}
+
+h3
+{
+/*	font-size: medium;
+	font-weight: normal;*/
+	font-style: italic;
+}
+
+.dwnldblock
+{
+	display: inline-grid;
+}
+
+.dwnldblock a
+{
+	background-color: lightgray;
+	padding: 8px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: black;
+}
+
+.dwnldicon
+{
+	float: left;
+	display: table-cell;
+}
+
+.dwnldicon img
+{
+	background-color: white;
+	padding: 2px;
+}
+
+.dwnlddesc
+{
+	display: table-cell;
+	padding-left: 10px;
+}
+
+.dwnlddesc span.line1
+{
+	white-space: nowrap;
+	font-size: large;
+}
+
+.dwnlddesc span.line2
+{
+	font-size: small;
+}
+
+ul.first > li
+{
+	padding-top: 1em;
+}
+
+.values
+{
+	font-style: italic;
+}
+
+pre
+{
+	white-space: normal;
+	padding: 10px;
+	border: 1px dashed lightgray;
+	background-color: #F5F5F5;
+	width: max-content;
+	min-width: 30%;
+}
+
+tt
+{
+	background-color: #F5F5F5;
+	padding: 2px;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>ZTB-Media Tiled Screen Designer</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+</head>
+<body>
+<div class="leftmenu">
+	<img src="ZM.TiledScreenDesigner256.png" alt="Tiled Screen Designer Logo">
+	<ul>
+	<li><a href="#overview">Pr&eacute;sentation</a></li>
+	<li><a href="#functions">Fonctionnalit&eacute;s</a></li>
+	<li><a href="#install">Installation</a></li>
+	<li><a href="#manual">Mode d'emploi</a></li>
+	<li><a href="#historic">Historique</a></li>
+	<li><a href="#download">T&eacute;l&eacute;chargement</a></li>
+	<li><a href="#credits">Cr&eacute;dits</a></li>
+	</ul>
+</div>
+<div class="content">
+	<div class="title"><a href="http://www.ztb-media.fr" target="_blank" class="titleztb">ZTB-Media</a> Tiled Screen Designer</div>
+	<div class="version">Version 1.0.0</div>
+	<div class="contentblock">
+		<a name="overview"></a>
+		<h2>Pr&eacute;sentation</h2>
+		<p>Tiled Screen Designer est un concepteur de fonds d'&eacute;cran sous forme de tuiles. Il r&eacute;pond aux besoins de conception de menus et d'&eacute;crans de commande, par exemple pour des interfaces domotiques,
+		ce pour quoi il a &eacute;t&eacute; conçu au d&eacute;part.</p>
+		<p>Sa philosophie est simple : un &eacute;cran contient une zone &quot;Header&quot; (plac&eacute;e en haut, en bas, &agrave; gauche ou &agrave; droite) et une zone de contenu, contenant elle m&ecirc;me des colonnes,
+		chacune compos&eacute;e de groupes de tuiles.</p>
+		<p>L'apparence de chaque &eacute;l&eacute;ment est totalement param&eacute;trable (couleur, opacit&eacute;, d&eacute;calage, titre, police, couleur de fond, image etc.), et l'organisation des tuiles se fait
+		automatiquement en fonction des dimensions et des espacements d&eacute;finis.</p>
+		<p>Le principe d'utilisation est simple, il suffit d'ajouter des objets dans l'arborescence et d'en d&eacute;finir les propri&eacute;t&eacute;s. Un menu contextuel (clic droit) sur chaque objet permet de
+		d&eacute;finir en une seule fois une m&ecirc;me propri&eacute;t&eacute; pour tout un groupe d'objets afin de faciliter la personnalisation.</p>
+		<p>Le design peut ensuite &ecirc;tre sauvegard&eacute; pour &ecirc;tre r&eacute;utilis&eacute;, ou partag&eacute; avec d'autres utilisateurs. Le fichier produit contient les images, il est donc totalement autonome
+		et transmissible tel quel.</p>
+	</div>
+	<div class="contentblock">
+		<a name="functions"></a>
+		<h2>Fonctionnalit&eacute;s</h2>
+		<p>
+			<ul>
+				<li>Agencement automatique des tuiles</li>
+				<li>Personnalisation compl&egrave;te de l'apparence des objets</li>
+				<li>Application des propri&eacute;t&eacute;s &agrave; un ensemble d'objets en un clic</li>
+				<li>Sauvegarde et r&eacute;-&eacute;dition des designs</li>
+			</ul>
+		</p>
+	</div>
+	<div class="contentblock">
+		<a name="install"></a>
+		<h2>Installation</h2>
+		<p>
+			<ol>
+				<li>T&eacute;l&eacute;charger <a href="#download">l'archive de l'application</a></li>
+				<li>D&eacute;compresser l'archive zip dans un dossier de votre PC (par exemple C:\TiledScreenDesigner)</li>
+				<li>D&eacute;marrer l'application</li>
+			</ol>
+		</p>
+	</div>
+	<div class="contentblock">
+		<a name="manual"></a>
+		<h2>Mode d'emploi</h2>
+		<h3>Utilisation</h3>
+		<p>
+			Vous pouvez utiliser MediaLauncher en mode ligne de commande, en passant le nom du fichier vid&eacute;o &agrave; jouer en param&egrave;tre :
+			<pre>C:\MediaLauncher>ZM.Media.Launcher "C:\Mes films\Mon fichier video.mkv"</pre>
+			Vous pouvez &eacute;galement associer vos types de fichiers &agrave; MediaLauncher au moyen des param&egrave;tres de Windows afin d'utilier MediaLauncher &agrave; chaque
+			lecture de vid&eacute;o en double-cliquant sur un fichier vid&eacute;o.
+		</p>
+		<p>
+			Le comportement de MediaLauncher est d&eacute;fini dans son fichier de configuration (voir ci-dessous). Vous pouvez &eacute;galement forcer certains param&egrave;tres &agrave; l'ex&eacute;cution en ajoutant des param&egrave;tres de ligne de commande. <b>Les param&egrave;tres de ligne de commande sont prioritaires sur le fichier de configuration.</b>
+		</p>
+		<p>
+			Vous pouvez ajouter le param&egrave;tre de ligne de commande <tt>--verbose</tt> pour afficher les d&eacute;tails de l'ex&eacute;cution dans la fen&ecirc;tre d'invite de commande. La premi&egrave;re partie de la sortie contiendra la configuration calcul&eacute;e (&agrave; partir du fichier de configuration et des options de ligne de commande), et la deuxi&egrave;me partie contiendra les &eacute;tapes de l'ex&eacute;cution. Cette m&eacute;thode permet de comprendre ce qui ne va pas lorsque le comportement de l'application n'est pas celui attendu.
+		</p>
+		<p>
+			Utilisez le param&egrave;tre de ligne de commande <tt>--help</tt> pour afficher la liste des param&egrave;tres de ligne de commande disponibles.
+		</p>
+		<h3>Fichier de configuration</h3>
+		<p>
+			Le fichier de configuration poss&egrave;de le m&ecirc;me nom que l'ex&eacute;cutable de l'application, avec l'extension &quot;conf&quot; :
+			<pre>ZM.Media.Launcher.conf</pre>
+			Les lignes vides et les lignes commen&ccedil;ant par # (marque de commentaire) sont ignor&eacute;es. Le fichier de configuration fourni contient une
+			configuration standard et des lignes de commentaire expliquant chaque directive.
+		</p>
+		<p>
+			<ul class="first">
+				<li><b>DELAY</b><br />Dur&eacute;e du d&eacute;lai appliqu&eacute; entre un changement de mode vid&eacute;o et le lancement de la lecture du fichier vid&eacute;o.</li>
+				<li><b>DELAYIF</b><br />D&eacute;termine dans quel cas appliquer le d&eacute;lai :
+				<ul>
+					<li><b>NONE :</b> Ne jamais appliquer le d&eacute;lai.</li>
+					<li><b>MODE :</b> Le d&eacute;lai s'applique &agrave; chaque changement de mode d'affichage (sauf au retour au mode initial &agrave; la fermeture de l'application).</li>
+					<li><b>FIRST :</b> Applique le d&eacute;lai seulement au premier changement de mode d'affichage.</li>
+					<li><b>START :</b> Applique le d&eacute;lai seulement au d&eacute;marrage de l'application.</li>
+					<li><b>ALL :</b> Applique le d&eacute;lai avant chaque lecture de fichier vid&eacute;o.</li>
+				</ul></li>
+				<li><b>COUNTDOWN</b><br />D&eacute;termine dans quel cas afficher un compte &agrave; rebours :
+				<ul>
+					<li><b>NONE :</b> Ne jamais afficher le compte &agrave; rebours.</li>
+					<li><b>MODE :</b> Le compte &agrave; rebours s'affiche &agrave; chaque changement de mode d'affichage (sauf au retour au mode initial &agrave; la fermeture de l'application).</li>
+					<li><b>FIRST :</b> Le compte &agrave; rebours s'affiche seulement au premier changement de mode d'affichage.</li>
+					<li><b>START :</b> Le compte &agrave; rebours s'affiche seulement au d&eacute;marrage de l'application.</li>
+					<li><b>ALL :</b> Affiche le compte &agrave; rebours avant chaque lecture de fichier vid&eacute;o.</li>
+				</ul>
+				Ind&eacute;pendamment de ce param&egrave;tre, le compte &agrave; rebours ne s'affichera que si un d&eacute;lai s'applique dans le m&ecirc;me cas, et si l'&eacute;cran noir (SHOWBLACKSCREEN, voir plus bas) est activ&eacute;.</li>
+				<li><b>DISPLAYMODE</b><br />D&eacute;termine comment s&eacute;lectionner le mode d'affichage :
+				<ul>
+					<li><b>NONE :</b> Ne change jamais le mode d'affichage.</li>
+					<li><b>COMPUTED :</b> Utilise les param&egrave;tres calcul&eacute;s &agrave; partir du fichier de configuration et des param&egrave;tres de ligne de commande.</li>
+					<li><b>MEDIAINFO :</b> Utilise la librairie MediaInfo pour lire le fichier vid&eacute;o est extraire du premier flux vid&eacute;o la r&eacute;solution et la fr&eacute;quence de rafra&icirc;chissement, puis utilise les sections SECTION RESOLUTION et SECTION FREQUENCY (voir plus bas) pour s&eacute;lectionner les meilleurs param&egrave;tres.</li>
+				</ul></li>
+				<li><b>SHOWBLACKSCREEN</b><br />Affiche un &eacute;cran noir d&egrave;s le d&eacute;marrage de l'application (utilis&eacute; aussi pour le d&eacute;lai et/ou le compte &agrave; rebours), afin d'assurer de douces transitions entre les vid&eacute;os.<br />
+				NOTE : Le compte &agrave; rebours ne s'affichera pas si ce param&egrave;tre est d&eacute;sactiv&eacute;.<br />
+				<span class="values">Valeurs possibles : 1, ON ou TRUE pour activer l'option, 0, OFF ou FALSE pour d&eacute;sactiver l'option.</span></li>
+				<li><b>RESTOREDISPLAY</b><br />D&eacute;termine si les param&egrave;tres d'affichage initiaux doivent &ecirc;tre restaur&eacute;s &agrave; la fin de l'ex&eacute;cution de l'application.</li>
+				<li><b>DISPLAY</b><br />Num&eacute;ro de l'&eacute;cran sur lequel doivent s'appliquer les changements de mode d'affichage, l'&eacute;cran noir et le compte &agrave; rebours.</li>
+				<li><b>BITDEPTH</b><br />Profondeur des couleurs en bits (8, 16, 24 ou 32). Sous Windows 8 et ult&eacute;rieur, seule la valeur 32 est applicable.</li>
+				<li><b>WIDTH</b><br />R&eacute;solution d'&eacute;cran en largeur &agrave; utiliser pour la lecture vid&eacute;o. Ce param&egrave;tre est utilis&eacute; si aucune correspondance n'est trouv&eacute;e dans la section SECTION RESOLUTION (voir plus bas).</li>
+				<li><b>HEIGHT</b><br />R&eacute;solution d'&eacute;cran en hauteur &agrave; utiliser pour la lecture vid&eacute;o. Ce param&egrave;tre est utilis&eacute; si aucune correspondance n'est trouv&eacute;e dans la section SECTION RESOLUTION (voir plus bas).</li>
+				<li><b>FREQUENCY</b><br />Fr&eacute;quence de rafra&icirc;chissement &agrave; utiliser pour la lecture vid&eacute;o. Ce param&egrave;tre est utilis&eacute; si aucune correspondance n'est trouv&eacute;e dans la section SECTION FREQUENCY (voir plus bas).</li>
+				<li><b>ORIENTATION</b><br />D&eacute;termine l'orientation de l'&eacute;cran &agrave; utiliser lors du changement de mode d'affichage :
+				<ul>
+					<li><b>0 :</b> Orientation par d&eacute;faut.</li>
+					<li><b>1 :</b> Rotation de 90&deg; dans le sens des aiguilles d'une montre.</li>
+					<li><b>2 :</b> Rotation de 180&deg; dans le sens des aiguilles d'une montre.</li>
+					<li><b>3 :</b> Rotation de 270&deg; dans le sens des aiguilles d'une montre.</li>
+				</ul></li>
+				<li><b>SECTION RESOLUTION</b><br />Section dans lequelle il est possible de pr&eacute;ciser des directives de s&eacute;lection de r&eacute;solution d'affichage, en fonction de la largeur de la vid&eacute;o en nombre de pixels.<br />
+				Chaque ligne contiendra une directive sous la forme <tt>MIN-MAX:WIDTHxHEIGHT</tt>.<br />
+				Exemple : <tt>1281-1920:1920x1080</tt> indiquera que pour toute vid&eacute;o dont la largeur est comprise entre 1281 et 1920 pixels inclus provoquera un mode d'affiche d'&eacute;cran de 1920 par 1080 pixels.<br />
+				La section devra toujours se terminer par une ligne contenant <tt>END SECTION</tt><br />
+				NOTE : Les r&eacute;solutions non pr&eacute;cis&eacute;es dans cette section utiliseront la valeur par d&eacute;faut, soit les param&egrave;tres WIDTH et HEIGHT (voir plus haut).<br />
+				Exemple de section :<br />
+				<pre>
+					SECTION RESOLUTION<br />
+					0-1280:1280x720<br />
+					1281-1920:1920x1080<br />
+					1921-3840:3840x2160<br />
+					END SECTION
+				</pre></li>
+				<li><b>SECTION FREQUENCY</b><br />Section dans lequelle il est possible de pr&eacute;ciser des directives de s&eacute;lection de fr&eacute;quence de rafra&icirc;chissement, en fonction de la vitesse de d&eacute;filement de la vid&eacute;o.<br />
+				Chaque ligne contiendra une directive sous la forme <tt>MIN-MAX:FRAMERATE</tt>.<br />
+				NOTE : La valeur minimum ou maximum est un nombre &agrave; d&eacute;cimales, mais la valeur &quot;FRAMERATE&quot; est un nombre entier. Les drivers d'affichage utilisent la valeur 23 afin de d&eacute;signer la fr&eacute;quence de 23,976 images par seconde.<br />
+				Exemple : <tt>23-23.999:23</tt> indiquera que pour toute vid&eacute;o dont la vitesse de d&eacute;filement est comprise entre 23 et 23,999 images par seconde inclus provoquera un mode d'affiche d'&eacute;cran 23,976 Hz.<br />
+				La section devra toujours se terminer par une ligne contenant <tt>END SECTION</tt><br />
+				NOTE : Les fr&eacute;quences non pr&eacute;cis&eacute;es dans cette section utiliseront la valeur par d&eacute;faut, soit le param&egrave;tre FREQUENCY (voir plus haut).<br />
+				Exemple de section :<br />
+				<pre>
+					SECTION FREQUENCY<br />
+					23-23.999:23<br />
+					24-24:24<br />
+					END SECTION
+				</pre></li>
+				<li><b>COMMAND</b><br />Section d&eacute;finissant une commande contenant une pr&eacute;f&eacute;rence, une ou plusieurs conditions et une ou plusieurs &eacute;tapes ex&eacute;cutables.<br />
+				La pr&eacute;f&eacute;rence permet de d&eacute;finir une priorit&eacute; qui d&eacute;terminera l'ordre d'ex&eacute;cution des commandes si plusieurs commandes satisfont aux conditions.<br />
+				Chaque ligne contiendra une condition ou &eacute;tape seulement. Les &eacute;tapes sont ex&eacute;cut&eacute;es dans l'ordre dans lequel elles apparaîssent dans le fichier de configuration.<br />
+				NOTE : Si plusieurs conditions sont d&eacute;finies, leur assemblage se fait avec un ET logique, c'est &agrave; dire que toutes les conditions doivent &ecirc;tre r&eacute;unies pour que la commande soit ex&eacute;cut&eacute;e. Pour effectuer un OU logique, veuillez cr&eacute;er plusieurs commandes s&eacute;par&eacute;es.<br />
+				Chaque <tt>COMMAND</tt> doit contenir une description pouvant contenir un ou plusieurs espaces.<br />
+				La section devra toujours se terminer par une ligne contenant <tt>END COMMAND</tt><br /><br />
+				Conditions possibles :<br />
+				<ul>
+					<li><b>RESOLUTION <em>MIN-MAX</em> :</b> Si la r&eacute;solution de la vid&eacute;o est comprise entre <tt>MIN</tt> et <tt>MAX</tt> compris. (<tt>MIN</tt> et <tt>MAX</tt> sont des nombres entiers)</li>
+					<li><b>RATIO <em>MIN-MAX</em> :</b> Si le ratio d'image est compris entre <tt>MIN</tt> et <tt>MAX</tt> compris. (<tt>MIN</tt> et <tt>MAX</tt> sont des nombres d&eacute;cimaux, le s&eacute;parateur d&eacute;cimal est le point)</li>
+					<li><b>FREQUENCY <em>MIN-MAX</em> :</b> Si la vitesse de d&eacute;filement de la vid&eacute;o est comprise entre <tt>MIN</tt> et <tt>MAX</tt> compris. (<tt>MIN</tt> et <tt>MAX</tt> sont des nombres d&eacute;cimaux, le s&eacute;parateur d&eacute;cimal est le point)</li>
+					<li><b>FILENAME <em>CONDITION PATTERN</em> :</b> Si le nom de fichier satisfait &agrave; la condition en utilisant <tt>PATTERN</tt>. Liste des conditions :<br />
+					<ul>
+						<li><b>STARTSWITH :</b> Si le nom du fichier commence par <tt>PATTERN</tt>.</li>
+						<li><b>ENDSWITH :</b> Si le nom du fichier termine par <tt>PATTERN</tt>.</li>
+						<li><b>CONTAINS :</b> Si le nom du fichier contient <tt>PATTERN</tt>.</li>
+					</ul></li>
+					<li><b>TRIGGER <em>EVENT</em> :</b> S'ex&eacute;cute lors de l'&eacute;v&egrave;nement <tt>EVENT</tt> (Fichier m&eacute;dia principal = fichier m&eacute;dia pass&eacute; en param&egrave;tre de ligne de commande) :<br />
+					<ul>
+						<li><b>START :</b> Au lancement de l'application.</li>
+						<li><b>MODE :</b> A chaque changement de mode d'affichage.</li>
+						<li><b>ALLPLAY :</b> A chaque lancement de lecture de n'importe quel fichier m&eacute;dia.</li>
+						<li><b>PLAY :</b> A chaque lancement de lecture d'un fichier m&eacute;dia non principal.</li>
+						<li><b>MAINPLAY :</b> Au lancement de lecture du fichier m&eacute;dia principal.</li>
+						<li><b>ALLENDPLAY :</b> Apr&egrave;s la lecture de n'importe quel fichier m&eacute;dia.</li>
+						<li><b>ENDPLAY :</b> Apr&egrave;s la lecture d'un fichier m&eacute;dia non principal.</li>
+						<li><b>MAINENDPLAY :</b> Apr&egrave;s la lecture du fichier m&eacute;dia principal.</li>
+						<li><b>EXIT :</b> A la sortie de l'application.</li>
+					</ul></li>
+				</ul><br />
+				Etapes possibles :<br />
+				<ul>
+					<li><b>WAIT <em>MS</em> :</b> Effectue une pause de <tt>MS</tt> millisecondes.</li>
+					<li><b>PATH <em>DIRECTORY</em> :</b> D&eacute;finit le r&eacute;pertoire de travail de la prochaine ex&eacute;cution de script ou application externe comme &eacute;tant <tt>DIRECTORY</tt>. Il est possible d'y inclure la variable <tt>&percnt;APPPATH&percnt;</tt> pour repr&eacute;senter le r&eacute;pertoire dans lequel se trouve MediaLauncher (<tt>&percnt;APPPATH&percnt;&bsol;SUBDIR1</tt> repr&eacute;sente le sous-r&eacute;pertoire <tt>SUBDIR1</tt> du r&eacute;pertoire où se trouve MediaLauncher).</li>
+					<li><b>EXEC <em>SCRIPT ARGUMENTS</em> :</b> Ex&eacute;cute le script ou fichier ex&eacute;cutable <tt>SCRIPT</tt> en passant <tt>ARGUMENTS</tt> comme arguments de ligne de commande. Il est possible d'utiliser &#123;0&#125; pour placer le nom du fichier m&eacute;dia. Astuce : entourer cette variable de guillemets (&quot;&#123;0&#125;&quot;) pour garantir la compatibilit&eacute; avec les noms de fichiers contenant des espaces. De m&ecirc;me, entourer <tt>SCRIPT</tt> de guillemets (&quot;) si le chemin et/ou le nom du fichier ex&eacute;cutable contiennent un ou plusieurs espaces.</li>
+					<li><b>HTTP <em>URL</em> :</b> Effectue un appel HTTP sur <tt>URL</tt>. Il est possible d'utiliser &#123;0&#125; pour placer le nom du fichier m&eacute;dia.</li>
+				</ul><br />
+				Exemple de commande : ex&eacute;cution du lecteur MPCHC pour la lecture de fichiers m&eacute;dia<br />
+				<pre>
+					COMMAND Player<br />
+					PREFERENCE 9999<br />
+					TRIGGER ALLPLAY<br />
+					PATH C:&bsol;MPC-HC<br />
+					EXEC C:&bsol;MPC-HC&bsol;MPCHC.exe &quot;&#123;0&#125;&quot;<br />
+					END COMMAND
+				</pre><br />
+				Exemple de commande : effectue un appel HTTP si le ratio d'image est compris entre 2.20 et 10 (on suppose que le ratio d'image d'une vid&eacute;o n'atteindra jamais une valeur sup&eacute;rieure &agrave; 10)<br />
+				<pre>
+					COMMAND Zoom VP 2.35<br />
+					PREFERENCE 1<br />
+					TRIGGER ALLPLAY<br />
+					RATIO 2.2-10<br />
+					HTTP http://192.168.0.10/send?cmd=usrzoom1<br />
+					END COMMAND
+				</pre><br />
+				Exemple de commande : effectue un appel HTTP pour r&eacute;tablir le zoom en sortie d'application<br />
+				<pre>
+					COMMAND Zoom VP 16/9<br />
+					PREFERENCE 1<br />
+					TRIGGER EXIT<br />
+					HTTP http://192.168.0.10/send?cmd=usrzoom2<br />
+					END COMMAND
+				</pre><br />
+				</li>
+			</ul>
+		</p>
+	</div>
+	<div class="contentblock">
+		<a name="historic"></a>
+		<h2>Historique</h2>
+		<h3>Version 1.0.0</h3>
+		<p>
+			<ul>
+				<li>Premi&egrave;re version</li>
+			</ul>
+		</p>
+	</div>
+	<div class="contentblock">
+		<a name="download"></a>
+		<h2>T&eacute;l&eacute;chargement</h2>
+		<div class="dwnldblock"><a href="ZM.TiledScreenDesigner-1.0.0.zip">
+			<div class="dwnldicon"><img src="Windows.png" width="32" /></div>
+			<div class="dwnlddesc">
+				<span class="line1">T&eacute;l&eacute;charger pour Windows</span><br />
+				<span class="line2">Version 1.0.0</span>
+			</div>
+		</a></div>
+	</div>
+	<div class="contentblock">
+		<a name="credits"></a>
+		<h2>Cr&eacute;dits</h2>
+		<p>
+			Ce produit est distribu&eacute; gratuitement pour une utilisation non commerciale. La redistribution de ce produit doit rester strictement gratuite. Ce produit est distribu&eacute; en mode "open-source",
+			les sources sont disponibles sur <href a="https://github.com/sierramike/ZM.TiledScreenDesigner" target="_blank">GitHub</a>. Toute modification du code doit &ecirc;tre rendue publique et distribu&eacute;e
+			avec la m&ecirc;me licence.
+		</p>
+		<p>
+			Cette application a &eacute;t&eacute; d&eacute;velopp&eacute;e par St&eacute;phane Moitry, et mise &agrave; disposition par ZTB-Media. N'h&eacute;sitez pas &agrave; utiliser le <a href="http://www.ztb-media.fr/contact/" target="_blank">formulaire de contact</a> pour toute question, remarque ou suggestion concernant son &eacute;volution.
+		</p>
+		<p>
+			Ce produit &eacute;tant gratuit, il ne b&eacute;n&eacute;ficie d'aucune garantie ni support &agrave; l'utilisation. Toutefois, je me ferai un plaisir de r&eacute;pondre &agrave; vos questions, dans la limite du temps libre que je pourrai y consacrer.
+		</p>
+		<p>
+			N'h&eacute;sitez pas &agrave; me faire part de toute redistribution de cette application au sein d'une offre packag&eacute;e, je me ferai un plaisir d'ajouter ci-dessous un lien vers votre solution et une description de celle-ci.
+		</p>
+		<p>
+			CE LOGICIEL EST FOURNI PAR LES D&Eacute;TENTEURS DE DROITS D'AUTEUR ET LES CONTRIBUTEURS "EN L'&Eacute;TAT" ET TOUTE GARANTIE EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, LES GARANTIES IMPLICITES DE QUALIT&Eacute; MARCHANDE ET D'ADAPTATION &Agrave; UN USAGE PARTICULIER SONT EXCLUES. EN AUCUN CAS LE TITULAIRE DES DROITS D'AUTEUR OU LES CONTRIBUTEURS NE POURRONT &Ecirc;TRE TENUS RESPONSABLES DES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, SP&Eacute;CIAUX, EXEMPLAIRES OU CONS&Eacute;CUTIFS (Y COMPRIS, MAIS SANS S'Y LIMITER, L'APPROVISIONNEMENT DE BIENS OU SERVICES DE SUBSTITUTION, PERTE D'UTILISATION, DONN&Eacute;ES OU PROFITS; OU INTERRUPTION D'AFFAIRES) TOUTEFOIS CAUS&Eacute;E ET SUR TOUTE TH&Eacute;ORIE DE RESPONSABILIT&Eacute;, CONTRACTUELLE, RESPONSABLE OU D&Eacute;LICTUELLE (Y COMPRIS LA N&Eacute;GLIGENCE OU AUTRE) D&Eacute;COULANT DE TOUTE MANI&Egrave;RE DE L'UTILISATION DE CE LOGICIEL, M&Ecirc;ME SI AVIS&Eacute; DE LA POSSIBILIT&Eacute; DE TELS DOMMAGES.
+		</p>
+		<p>
+			<ul>
+				<li>Ic&ocirc;ne Launcher par <a href="http://xenatt.deviantart.com/" target="_blank">Nattapong Pullkhow</a>.</li>
+				<li>Ce produit utilise la librairie <a href="https://mediaarea.net/fr/MediaInfo" target="_blank">MediaInfo</a>, Copyright (c) 2002-2018 <a href="mailto:info@mediaarea.net">MediaArea.net SARL</a>.</li>
+				<li>Ce produit utilise la librairie <a href="https://github.com/commandlineparser/commandline/" target="_blank">CommandLineParser</a>, distribu&eacute; sous license MIT, Copyright (c) 2005 - 2015 Giacomo Stelluti Scala & Contributors</li>
+			</ul>
+		</p>
+	</div>
+</div>
+</body>
+</html>
