@@ -4,6 +4,10 @@
 <title>ZTB-Media Tiled Screen Designer</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="pv/photoviewer.css">
+<script src="jquery-3.3.1.min.js"></script>
+<script src="pv/photoviewer.js"></script>
 </head>
 <body>
 <div class="leftmenu">
@@ -34,6 +38,16 @@
 		d&eacute;finir en une seule fois une m&ecirc;me propri&eacute;t&eacute; pour tout un groupe d'objets afin de faciliter la personnalisation.</p>
 		<p>Le design peut ensuite &ecirc;tre sauvegard&eacute; pour &ecirc;tre r&eacute;utilis&eacute;, ou partag&eacute; avec d'autres utilisateurs. Le fichier produit contient les images, il est donc totalement autonome
 		et transmissible tel quel.</p>
+
+<div class="myGallery">
+  <a data-gallery="example" data-caption="Caption 1" data-group="a" href="https://raw.githubusercontent.com/sierramike/ZM.TiledScreenDesigner/master/Documents/MainForm.png"><img src="https://raw.githubusercontent.com/sierramike/ZM.TiledScreenDesigner/master/Documents/MainForm.png" alt="Image 1" style="width:400px"></a>
+<!--  <a data-gallery="example" data-caption="Caption 2" data-group="a" href="2.jpg"><img src="2.jpg" alt="Image 2"></a>
+  <a data-gallery="example" data-caption="Caption 3" data-group="a" href="3.jpg"><img src="3.jpg" alt="Image 3"></a>-->
+</div>		
+<script>
+    $('[data-gallery=example]').photoviewer();
+</script>
+		
 	</div>
 	<div class="contentblock">
 		<a name="functions"></a>
