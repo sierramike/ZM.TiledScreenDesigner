@@ -128,6 +128,8 @@
             this.ctxPVExport = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxPVExportJPG = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxPVExportPNG = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxPVSep3 = new System.Windows.Forms.ToolStripSeparator();
+            this.ctxPVHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.ctxTV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -852,9 +854,11 @@
             this.ctxPVSep1,
             this.ctxPVFullScreen,
             this.ctxPVSep2,
-            this.ctxPVExport});
+            this.ctxPVExport,
+            this.ctxPVSep3,
+            this.ctxPVHelp});
             this.ctxPV.Name = "ctxPV";
-            this.ctxPV.Size = new System.Drawing.Size(196, 148);
+            this.ctxPV.Size = new System.Drawing.Size(196, 198);
             // 
             // ctxPVNew
             // 
@@ -922,16 +926,29 @@
             // ctxPVExportJPG
             // 
             this.ctxPVExportJPG.Name = "ctxPVExportJPG";
-            this.ctxPVExportJPG.Size = new System.Drawing.Size(137, 22);
+            this.ctxPVExportJPG.Size = new System.Drawing.Size(152, 22);
             this.ctxPVExportJPG.Text = "JPG format";
             this.ctxPVExportJPG.Click += new System.EventHandler(this.ctxPVExportJPG_Click);
             // 
             // ctxPVExportPNG
             // 
             this.ctxPVExportPNG.Name = "ctxPVExportPNG";
-            this.ctxPVExportPNG.Size = new System.Drawing.Size(137, 22);
+            this.ctxPVExportPNG.Size = new System.Drawing.Size(152, 22);
             this.ctxPVExportPNG.Text = "PNG format";
             this.ctxPVExportPNG.Click += new System.EventHandler(this.ctxPVExportPNG_Click);
+            // 
+            // ctxPVSep3
+            // 
+            this.ctxPVSep3.Name = "ctxPVSep3";
+            this.ctxPVSep3.Size = new System.Drawing.Size(192, 6);
+            // 
+            // ctxPVHelp
+            // 
+            this.ctxPVHelp.Image = ((System.Drawing.Image)(resources.GetObject("ctxPVHelp.Image")));
+            this.ctxPVHelp.Name = "ctxPVHelp";
+            this.ctxPVHelp.Size = new System.Drawing.Size(195, 22);
+            this.ctxPVHelp.Text = "Help ...";
+            this.ctxPVHelp.Click += new System.EventHandler(this.ctxPVHelp_Click);
             // 
             // frmMaster
             // 
@@ -1059,6 +1076,8 @@
         private System.Windows.Forms.ToolStripMenuItem ctxPVSave;
         private System.Windows.Forms.ToolStripMenuItem ctxPVSaveAs;
         private System.Windows.Forms.ToolStripSeparator ctxPVSep2;
+        private System.Windows.Forms.ToolStripSeparator ctxPVSep3;
+        private System.Windows.Forms.ToolStripMenuItem ctxPVHelp;
     }
 }
 
