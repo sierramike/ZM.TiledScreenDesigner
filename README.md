@@ -1,4 +1,4 @@
 # ZM.TiledScreenDesigner
 Tiled Screen Designer
 
-Instructions at http://tiledscreendesigner.ztb.fr
+Instructions and binary download at http://tiledscreendesigner.ztb.fr
